@@ -14,6 +14,9 @@
 		92D038162D772B5E002BFC28 /* CoworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038152D772B5E002BFC28 /* CoworkTests.swift */; };
 		92D038202D772B5E002BFC28 /* CoworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0381F2D772B5E002BFC28 /* CoworkUITests.swift */; };
 		92D038222D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038212D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift */; };
+		92EC71282D77311F00E0DD54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */; };
+		92EC71302D77329200E0DD54 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC712F2D77329200E0DD54 /* SplashView.swift */; };
+		92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC71312D7733FB00E0DD54 /* FontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,15 @@
 		92D0381B2D772B5E002BFC28 /* CoworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D0381F2D772B5E002BFC28 /* CoworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkUITests.swift; sourceTree = "<group>"; };
 		92D038212D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		92EC71292D77313E00E0DD54 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		92EC712A2D77313E00E0DD54 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		92EC712B2D77313E00E0DD54 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		92EC712C2D77313E00E0DD54 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		92EC712D2D77313E00E0DD54 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		92EC712E2D7731ED00E0DD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		92EC712F2D77329200E0DD54 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		92EC71312D7733FB00E0DD54 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +106,14 @@
 		92D038032D772B5C002BFC28 /* Cowork */ = {
 			isa = PBXGroup;
 			children = (
+				92EC71242D772EDE00E0DD54 /* Authentication */,
+				92EC71232D772EA100E0DD54 /* Onboarding */,
+				92EC71222D772E9300E0DD54 /* Splash */,
 				92D038042D772B5C002BFC28 /* CoworkApp.swift */,
 				92D038062D772B5C002BFC28 /* ContentView.swift */,
 				92D038082D772B5E002BFC28 /* Assets.xcassets */,
+				92EC712E2D7731ED00E0DD54 /* Info.plist */,
+				92EC71262D77308900E0DD54 /* Font */,
 				92D0380A2D772B5E002BFC28 /* Preview Content */,
 			);
 			path = Cowork;
@@ -125,6 +142,42 @@
 				92D038212D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift */,
 			);
 			path = CoworkUITests;
+			sourceTree = "<group>";
+		};
+		92EC71222D772E9300E0DD54 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				92EC712F2D77329200E0DD54 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		92EC71232D772EA100E0DD54 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		92EC71242D772EDE00E0DD54 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		92EC71262D77308900E0DD54 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */,
+				92EC712A2D77313E00E0DD54 /* Montserrat-Light.ttf */,
+				92EC712C2D77313E00E0DD54 /* Montserrat-Medium.ttf */,
+				92EC712D2D77313E00E0DD54 /* Montserrat-Regular.ttf */,
+				92EC71292D77313E00E0DD54 /* Montserrat-SemiBold.ttf */,
+				92EC712B2D77313E00E0DD54 /* Montserrat-Thin.ttf */,
+				92EC71312D7733FB00E0DD54 /* FontExtension.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +286,7 @@
 			files = (
 				92D0380C2D772B5E002BFC28 /* Preview Assets.xcassets in Resources */,
 				92D038092D772B5E002BFC28 /* Assets.xcassets in Resources */,
+				92EC71282D77311F00E0DD54 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +313,8 @@
 			files = (
 				92D038072D772B5C002BFC28 /* ContentView.swift in Sources */,
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
+				92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */,
+				92EC71302D77329200E0DD54 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +476,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cowork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +506,7 @@
 				DEVELOPMENT_TEAM = 72NQPP668A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cowork/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
