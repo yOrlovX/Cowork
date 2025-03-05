@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var isUserRegister = false
     
     var body: some View {
         VStack {
@@ -24,6 +25,9 @@ struct LoginView: View {
         }
         .ignoresSafeArea(edges: .top)
         .toolbar(.hidden)
+        .navigationDestination(isPresented: $isUserRegister) {
+            RegisterView()
+        }
     }
 }
 
@@ -89,7 +93,7 @@ extension LoginView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: {}) {
+            Button(action: { isUserRegister = true }) {
                 HStack {
                     Text("Don’t Have An Account yet?")
                         .font(Montserrat.medium.size(size: 12))

@@ -12,6 +12,7 @@ struct RegisterView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
+    @State private var isUserRegister = false
     
     var body: some View {
         VStack {
@@ -26,6 +27,9 @@ struct RegisterView: View {
         }
         .ignoresSafeArea(edges: .top)
         .toolbar(.hidden)
+        .navigationDestination(isPresented: $isUserRegister) {
+            LoginView()
+        }
     }
 }
 
@@ -108,7 +112,7 @@ extension RegisterView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: {}) {
+            Button(action: { isUserRegister = true }) {
                 HStack {
                     Text("Already have an account?")
                         .font(Montserrat.medium.size(size: 12))
