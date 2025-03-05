@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043A2D78362900DA5CAF /* ColorsExtension.swift */; };
 		92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038042D772B5C002BFC28 /* CoworkApp.swift */; };
-		92D038072D772B5C002BFC28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038062D772B5C002BFC28 /* ContentView.swift */; };
 		92D038092D772B5E002BFC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D038082D772B5E002BFC28 /* Assets.xcassets */; };
 		92D0380C2D772B5E002BFC28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D0380B2D772B5E002BFC28 /* Preview Assets.xcassets */; };
 		92D038162D772B5E002BFC28 /* CoworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038152D772B5E002BFC28 /* CoworkTests.swift */; };
@@ -17,6 +17,7 @@
 		92EC71282D77311F00E0DD54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */; };
 		92EC71302D77329200E0DD54 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC712F2D77329200E0DD54 /* SplashView.swift */; };
 		92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC71312D7733FB00E0DD54 /* FontExtension.swift */; };
+		92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC71332D773A3800E0DD54 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92B0043A2D78362900DA5CAF /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		92D038012D772B5C002BFC28 /* Cowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D038042D772B5C002BFC28 /* CoworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkApp.swift; sourceTree = "<group>"; };
-		92D038062D772B5C002BFC28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92D038082D772B5E002BFC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D0380B2D772B5E002BFC28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92D038112D772B5E002BFC28 /* CoworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +57,7 @@
 		92EC712E2D7731ED00E0DD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92EC712F2D77329200E0DD54 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		92EC71312D7733FB00E0DD54 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		92EC71332D773A3800E0DD54 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92B004392D78360800DA5CAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				92B0043A2D78362900DA5CAF /* ColorsExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		92D037F82D772B5C002BFC28 = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +116,11 @@
 		92D038032D772B5C002BFC28 /* Cowork */ = {
 			isa = PBXGroup;
 			children = (
-				92EC71242D772EDE00E0DD54 /* Authentication */,
-				92EC71232D772EA100E0DD54 /* Onboarding */,
-				92EC71222D772E9300E0DD54 /* Splash */,
+				92B004392D78360800DA5CAF /* Helpers */,
 				92D038042D772B5C002BFC28 /* CoworkApp.swift */,
-				92D038062D772B5C002BFC28 /* ContentView.swift */,
+				92EC71222D772E9300E0DD54 /* Splash */,
+				92EC71232D772EA100E0DD54 /* Onboarding */,
+				92EC71242D772EDE00E0DD54 /* Authentication */,
 				92D038082D772B5E002BFC28 /* Assets.xcassets */,
 				92EC712E2D7731ED00E0DD54 /* Info.plist */,
 				92EC71262D77308900E0DD54 /* Font */,
@@ -155,6 +165,7 @@
 		92EC71232D772EA100E0DD54 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				92EC71332D773A3800E0DD54 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -311,8 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D038072D772B5C002BFC28 /* ContentView.swift in Sources */,
+				92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */,
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
+				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
 				92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */,
 				92EC71302D77329200E0DD54 /* SplashView.swift in Sources */,
 			);

@@ -1,0 +1,13 @@
+//
+//  ColorsExtension.swift
+//  Cowork
+//
+//  Created by Yaroslav Orlov on 05.03.2025.
+//
+
+import SwiftUI
+
+extension Color {
+    static let primaryDark = Color("primaryDark")
+    static let primaryGray = Color("primaryGray")
+}
