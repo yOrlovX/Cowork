@@ -15,6 +15,7 @@
 		92D038162D772B5E002BFC28 /* CoworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038152D772B5E002BFC28 /* CoworkTests.swift */; };
 		92D038202D772B5E002BFC28 /* CoworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0381F2D772B5E002BFC28 /* CoworkUITests.swift */; };
 		92D038222D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038212D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift */; };
+		92DE60282D78611F00693AB8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DE60272D78611F00693AB8 /* RegisterView.swift */; };
 		92EC71282D77311F00E0DD54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */; };
 		92EC71302D77329200E0DD54 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC712F2D77329200E0DD54 /* SplashView.swift */; };
 		92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC71312D7733FB00E0DD54 /* FontExtension.swift */; };
@@ -50,6 +51,7 @@
 		92D0381B2D772B5E002BFC28 /* CoworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D0381F2D772B5E002BFC28 /* CoworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkUITests.swift; sourceTree = "<group>"; };
 		92D038212D772B5E002BFC28 /* CoworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92DE60272D78611F00693AB8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		92EC71272D77311F00E0DD54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		92EC71292D77313E00E0DD54 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		92EC712A2D77313E00E0DD54 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				92B0043E2D7844BA00DA5CAF /* LoginView.swift */,
+				92DE60272D78611F00693AB8 /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */,
 				92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */,
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
+				92DE60282D78611F00693AB8 /* RegisterView.swift in Sources */,
 				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
 				92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */,
 				92EC71302D77329200E0DD54 /* SplashView.swift in Sources */,
