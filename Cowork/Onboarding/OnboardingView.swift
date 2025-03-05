@@ -15,16 +15,22 @@ enum OnboardingState {
 
 struct OnboardingView: View {
     @State private var onboardingState: OnboardingState = .first
+    @State private var isOnboardingComplete = false
     
     var body: some View {
-        ZStack {
-            switch onboardingState {
-            case .first:
-                firstOnboardingScreen
-            case .second:
-                secondOnboardingScreen
-            case .third:
-                thirdOnboardingScreen
+        NavigationStack {
+            ZStack {
+                switch onboardingState {
+                case .first:
+                    firstOnboardingScreen
+                case .second:
+                    secondOnboardingScreen
+                case .third:
+                    thirdOnboardingScreen
+                }
+            }
+            .navigationDestination(isPresented: $isOnboardingComplete) {
+                LoginView()
             }
         }
     }
@@ -114,7 +120,7 @@ extension OnboardingView {
                         .font(Montserrat.medium.size(size: 12))
                         .foregroundColor(.primaryGray)
                     Spacer()
-                    Button(action: {}) {
+                    Button(action: { isOnboardingComplete = true }) {
                         Rectangle()
                             .foregroundColor(.primaryDark)
                             .frame(width: 38, height: 38)

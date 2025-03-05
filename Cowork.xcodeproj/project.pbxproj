@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043A2D78362900DA5CAF /* ColorsExtension.swift */; };
+		92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043E2D7844BA00DA5CAF /* LoginView.swift */; };
 		92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038042D772B5C002BFC28 /* CoworkApp.swift */; };
 		92D038092D772B5E002BFC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D038082D772B5E002BFC28 /* Assets.xcassets */; };
 		92D0380C2D772B5E002BFC28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D0380B2D772B5E002BFC28 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		92B0043A2D78362900DA5CAF /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
+		92B0043E2D7844BA00DA5CAF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		92D038012D772B5C002BFC28 /* Cowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D038042D772B5C002BFC28 /* CoworkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkApp.swift; sourceTree = "<group>"; };
 		92D038082D772B5E002BFC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		92EC71242D772EDE00E0DD54 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				92B0043E2D7844BA00DA5CAF /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */,
 				92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */,
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
 				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
