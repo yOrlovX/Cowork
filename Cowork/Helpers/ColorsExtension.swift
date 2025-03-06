@@ -12,4 +12,5 @@ extension Color {
     static let primaryGray = Color("primaryGray")
     static let textfieldBackground = Color("textfieldBackground")
     static let primaryPurple = Color("primaryPurple")
+    static let lightBackground = Color("lightBackground")
 }

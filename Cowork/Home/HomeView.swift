@@ -9,13 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var searchText: String = ""
+    let data: [CoworkingSpaceMock] = mockCoworkingSpaces
     
     var body: some View {
         VStack {
             userContainer
             serchbarAndFilterContainer
             buttonsContainer
+            VStack {
+                ScrollView {
+                    ForEach(data) { data in
+                        CoworkingSpaceCell(data: data)
+                    }
+                }
+            }
         }
+        .background(Color.lightBackground)
     }
 }
 
