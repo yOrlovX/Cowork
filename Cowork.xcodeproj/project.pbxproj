@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9264DC2A2D7998290060DEE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9264DC292D7998290060DEE2 /* HomeView.swift */; };
+		9264DC2C2D799F680060DEE2 /* CoworkingSpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */; };
 		926A993D2D788A9C00394FA4 /* CoworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A993C2D788A9C00394FA4 /* CoworkingModel.swift */; };
 		92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043A2D78362900DA5CAF /* ColorsExtension.swift */; };
 		92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043E2D7844BA00DA5CAF /* LoginView.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		9264DC292D7998290060DEE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceCell.swift; sourceTree = "<group>"; };
 		926A993C2D788A9C00394FA4 /* CoworkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingModel.swift; sourceTree = "<group>"; };
 		92B0043A2D78362900DA5CAF /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		92B0043E2D7844BA00DA5CAF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9264DC292D7998290060DEE2 /* HomeView.swift */,
+				9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				9264DC2A2D7998290060DEE2 /* HomeView.swift in Sources */,
 				92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */,
+				9264DC2C2D799F680060DEE2 /* CoworkingSpaceCell.swift in Sources */,
 				92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */,
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
 				926A993D2D788A9C00394FA4 /* CoworkingModel.swift in Sources */,
