@@ -12,7 +12,7 @@ struct HomeView: View {
     let data: [CoworkingSpaceMock] = mockCoworkingSpaces
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             userContainer
             serchbarAndFilterContainer
             buttonsContainer
@@ -30,18 +30,22 @@ struct HomeView: View {
 
 extension HomeView {
     private var userContainer: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Image("homeUserImage")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 45, height: 45)
-            Text("Hello, Anam!")
-                .font(Montserrat.medium.size(size: 15))
-                .foregroundColor(.primaryPurple)
-            Text("More Productive with Comfortable Place ")
-                .font(Montserrat.bold.size(size: 20))
-                .foregroundColor(.primaryDark)
+        HStack {
+            VStack(alignment: .leading, spacing: 10) {
+                Image("homeUserImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 45, height: 45)
+                Text("Hello, Anam!")
+                    .font(Montserrat.medium.size(size: 15))
+                    .foregroundColor(.primaryPurple)
+                Text("More Productive with Comfortable Place ")
+                    .font(Montserrat.bold.size(size: 20))
+                    .foregroundColor(.primaryDark)
+            }
+            Spacer()
         }
+        .padding(.leading, 20)
     }
     
     private var serchbarAndFilterContainer: some View {

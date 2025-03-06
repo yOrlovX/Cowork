@@ -55,7 +55,7 @@ struct CoworkingSpaceCell: View {
                 .padding(.trailing, 9)
             }
             .background(.white)
-            .cornerRadius(16)
+            .cornerRadius(5)
             .frame(maxWidth: UIScreen.main.bounds.width - 40)
     }
 }

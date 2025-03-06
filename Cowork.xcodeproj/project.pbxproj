@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		925C5BB92D79BC6B002683BE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C5BB82D79BC6B002683BE /* MainView.swift */; };
 		9264DC2A2D7998290060DEE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9264DC292D7998290060DEE2 /* HomeView.swift */; };
 		9264DC2C2D799F680060DEE2 /* CoworkingSpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */; };
 		926A993D2D788A9C00394FA4 /* CoworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A993C2D788A9C00394FA4 /* CoworkingModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		925C5BB82D79BC6B002683BE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9264DC292D7998290060DEE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingSpaceCell.swift; sourceTree = "<group>"; };
 		926A993C2D788A9C00394FA4 /* CoworkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingModel.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		925C5BB72D79BC5E002683BE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				925C5BB82D79BC6B002683BE /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		9264DC282D7998160060DEE2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		92D038032D772B5C002BFC28 /* Cowork */ = {
 			isa = PBXGroup;
 			children = (
+				925C5BB72D79BC5E002683BE /* Main */,
 				92D038042D772B5C002BFC28 /* CoworkApp.swift */,
 				9264DC282D7998160060DEE2 /* Home */,
 				926A993B2D788A8700394FA4 /* Model */,
@@ -360,6 +371,7 @@
 				92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */,
 				926A993D2D788A9C00394FA4 /* CoworkingModel.swift in Sources */,
 				92DE60282D78611F00693AB8 /* RegisterView.swift in Sources */,
+				925C5BB92D79BC6B002683BE /* MainView.swift in Sources */,
 				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
 				92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */,
 				92EC71302D77329200E0DD54 /* SplashView.swift in Sources */,
