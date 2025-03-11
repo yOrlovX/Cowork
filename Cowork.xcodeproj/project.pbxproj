@@ -15,6 +15,9 @@
 		927CDBC92D7B582B0014888B /* ProfileEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CDBC82D7B582B0014888B /* ProfileEventCell.swift */; };
 		928C8D252D7AEAB900F22632 /* CoworkingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C8D242D7AEAB900F22632 /* CoworkingDetailView.swift */; };
 		928C8D292D7AFB3700F22632 /* DetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928C8D282D7AFB3700F22632 /* DetailRowView.swift */; };
+		92AB52002D8028000036CD7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92AB51FF2D8028000036CD7F /* GoogleService-Info.plist */; };
+		92AB52032D8029880036CD7F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 92AB52022D8029880036CD7F /* FirebaseAnalytics */; };
+		92AB52052D8029880036CD7F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92AB52042D8029880036CD7F /* FirebaseAnalyticsSwift */; };
 		92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043A2D78362900DA5CAF /* ColorsExtension.swift */; };
 		92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043E2D7844BA00DA5CAF /* LoginView.swift */; };
 		92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038042D772B5C002BFC28 /* CoworkApp.swift */; };
@@ -57,6 +60,7 @@
 		927CDBC82D7B582B0014888B /* ProfileEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEventCell.swift; sourceTree = "<group>"; };
 		928C8D242D7AEAB900F22632 /* CoworkingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingDetailView.swift; sourceTree = "<group>"; };
 		928C8D282D7AFB3700F22632 /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
+		92AB51FF2D8028000036CD7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92B0043A2D78362900DA5CAF /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		92B0043E2D7844BA00DA5CAF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		92D038012D772B5C002BFC28 /* Cowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92AB52052D8029880036CD7F /* FirebaseAnalyticsSwift in Frameworks */,
+				92AB52032D8029880036CD7F /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +190,7 @@
 				92EC71232D772EA100E0DD54 /* Onboarding */,
 				92EC71242D772EDE00E0DD54 /* Authentication */,
 				92D038082D772B5E002BFC28 /* Assets.xcassets */,
+				92AB51FF2D8028000036CD7F /* GoogleService-Info.plist */,
 				92EC712E2D7731ED00E0DD54 /* Info.plist */,
 				92EC71262D77308900E0DD54 /* Font */,
 				92D0380A2D772B5E002BFC28 /* Preview Content */,
@@ -280,6 +287,10 @@
 			dependencies = (
 			);
 			name = Cowork;
+			packageProductDependencies = (
+				92AB52022D8029880036CD7F /* FirebaseAnalytics */,
+				92AB52042D8029880036CD7F /* FirebaseAnalyticsSwift */,
+			);
 			productName = Cowork;
 			productReference = 92D038012D772B5C002BFC28 /* Cowork.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +363,9 @@
 				Base,
 			);
 			mainGroup = 92D037F82D772B5C002BFC28;
+			packageReferences = (
+				92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 92D038022D772B5C002BFC28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D0380C2D772B5E002BFC28 /* Preview Assets.xcassets in Resources */,
+				92AB52002D8028000036CD7F /* GoogleService-Info.plist in Resources */,
 				92D038092D772B5E002BFC28 /* Assets.xcassets in Resources */,
 				92EC71282D77311F00E0DD54 /* Montserrat-Bold.ttf in Resources */,
 			);
@@ -737,6 +752,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92AB52022D8029880036CD7F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		92AB52042D8029880036CD7F /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92D037F92D772B5C002BFC28 /* Project object */;
 }
