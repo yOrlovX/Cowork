@@ -12,6 +12,8 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var isUserRegister = false
     
+    @StateObject private var authenticationViewModel = AuthenticationViewModel()
+    
     var body: some View {
         VStack {
             Image("loginViewImage")
@@ -42,7 +44,7 @@ extension LoginView {
                 Text("Email")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Youremail@mail.com", text: $email)
+                TextField("Youremail@mail.com", text: $authenticationViewModel.email)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -54,7 +56,7 @@ extension LoginView {
                 Text("Password")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Password ****", text: $password)
+                TextField("Password ****", text: $authenticationViewModel.password)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -85,7 +87,7 @@ extension LoginView {
     
     private var primaryButtonContainer: some View {
         VStack(spacing: 39) {
-            Button(action: {}) {
+            Button(action: { authenticationViewModel.signIn() }) {
                 Text("Login")
                     .foregroundColor(.white)
                     .frame(height: 55)

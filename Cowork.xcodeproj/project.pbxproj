@@ -18,6 +18,9 @@
 		92AB52002D8028000036CD7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92AB51FF2D8028000036CD7F /* GoogleService-Info.plist */; };
 		92AB52032D8029880036CD7F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 92AB52022D8029880036CD7F /* FirebaseAnalytics */; };
 		92AB52052D8029880036CD7F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92AB52042D8029880036CD7F /* FirebaseAnalyticsSwift */; };
+		92AB52082D802F530036CD7F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 92AB52072D802F530036CD7F /* FirebaseAuth */; };
+		92AB520B2D8030410036CD7F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB520A2D8030410036CD7F /* AuthenticationViewModel.swift */; };
+		92AB520E2D80317C0036CD7F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB520D2D80317C0036CD7F /* AuthenticationManager.swift */; };
 		92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043A2D78362900DA5CAF /* ColorsExtension.swift */; };
 		92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B0043E2D7844BA00DA5CAF /* LoginView.swift */; };
 		92D038052D772B5C002BFC28 /* CoworkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D038042D772B5C002BFC28 /* CoworkApp.swift */; };
@@ -61,6 +64,8 @@
 		928C8D242D7AEAB900F22632 /* CoworkingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkingDetailView.swift; sourceTree = "<group>"; };
 		928C8D282D7AFB3700F22632 /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
 		92AB51FF2D8028000036CD7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92AB520A2D8030410036CD7F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		92AB520D2D80317C0036CD7F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		92B0043A2D78362900DA5CAF /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		92B0043E2D7844BA00DA5CAF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		92D038012D772B5C002BFC28 /* Cowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92AB52052D8029880036CD7F /* FirebaseAnalyticsSwift in Frameworks */,
+				92AB52082D802F530036CD7F /* FirebaseAuth in Frameworks */,
 				92AB52032D8029880036CD7F /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +154,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		92AB52062D802F530036CD7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92AB52092D8030190036CD7F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				92AB520A2D8030410036CD7F /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		92AB520C2D8031650036CD7F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				92AB520D2D80317C0036CD7F /* AuthenticationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		92B004392D78360800DA5CAF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +192,7 @@
 				92D038142D772B5E002BFC28 /* CoworkTests */,
 				92D0381E2D772B5E002BFC28 /* CoworkUITests */,
 				92D038022D772B5C002BFC28 /* Products */,
+				92AB52062D802F530036CD7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +209,8 @@
 		92D038032D772B5C002BFC28 /* Cowork */ = {
 			isa = PBXGroup;
 			children = (
+				92AB520C2D8031650036CD7F /* Managers */,
+				92AB52092D8030190036CD7F /* ViewModels */,
 				92D038042D772B5C002BFC28 /* CoworkApp.swift */,
 				92DA86212D7B1BCA00A040CD /* Profile */,
 				924179B32D79EB03000E04D8 /* Favorite */,
@@ -290,6 +322,7 @@
 			packageProductDependencies = (
 				92AB52022D8029880036CD7F /* FirebaseAnalytics */,
 				92AB52042D8029880036CD7F /* FirebaseAnalyticsSwift */,
+				92AB52072D802F530036CD7F /* FirebaseAuth */,
 			);
 			productName = Cowork;
 			productReference = 92D038012D772B5C002BFC28 /* Cowork.app */;
@@ -412,6 +445,8 @@
 			files = (
 				9264DC2A2D7998290060DEE2 /* HomeView.swift in Sources */,
 				92B0043F2D7844BA00DA5CAF /* LoginView.swift in Sources */,
+				92AB520B2D8030410036CD7F /* AuthenticationViewModel.swift in Sources */,
+				92AB520E2D80317C0036CD7F /* AuthenticationManager.swift in Sources */,
 				9264DC2C2D799F680060DEE2 /* CoworkingSpaceCell.swift in Sources */,
 				92B0043B2D78362900DA5CAF /* ColorsExtension.swift in Sources */,
 				927CDBC92D7B582B0014888B /* ProfileEventCell.swift in Sources */,
@@ -774,6 +809,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
+		};
+		92AB52072D802F530036CD7F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92AB52012D8029880036CD7F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
