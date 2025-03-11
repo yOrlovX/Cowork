@@ -30,7 +30,7 @@ struct OnboardingView: View {
                 }
             }
             .navigationDestination(isPresented: $isOnboardingComplete) {
-                LoginView()
+                AuthenticationView()
             }
         }
     }

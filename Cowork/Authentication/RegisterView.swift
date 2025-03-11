@@ -12,7 +12,8 @@ struct RegisterView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
-    @State private var isUserRegister = false
+    
+    @Binding var authenticationState: AuthenticationState
     
     var body: some View {
         VStack {
@@ -27,9 +28,6 @@ struct RegisterView: View {
         }
         .ignoresSafeArea(edges: .top)
         .toolbar(.hidden)
-        .navigationDestination(isPresented: $isUserRegister) {
-            LoginView()
-        }
     }
 }
 
@@ -112,7 +110,7 @@ extension RegisterView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: { isUserRegister = true }) {
+            Button(action: { authenticationState = .login }) {
                 HStack {
                     Text("Already have an account?")
                         .font(Montserrat.medium.size(size: 12))
@@ -129,6 +127,6 @@ extension RegisterView {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(authenticationState: .constant(.register))
     }
 }

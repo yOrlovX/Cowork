@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var isUserRegister = false
+   
+    @Binding var authenticationState: AuthenticationState
     
     @StateObject private var authenticationViewModel = AuthenticationViewModel()
     
@@ -27,9 +26,6 @@ struct LoginView: View {
         }
         .ignoresSafeArea(edges: .top)
         .toolbar(.hidden)
-        .navigationDestination(isPresented: $isUserRegister) {
-            RegisterView()
-        }
     }
 }
 
@@ -95,7 +91,7 @@ extension LoginView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: { isUserRegister = true }) {
+            Button(action: { authenticationState = .register }) {
                 HStack {
                     Text("Don’t Have An Account yet?")
                         .font(Montserrat.medium.size(size: 12))
@@ -110,8 +106,10 @@ extension LoginView {
     }
 }
 
+#if DEBUG
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(authenticationState: .constant(.login))
     }
 }
+#endif
