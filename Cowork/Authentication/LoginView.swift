@@ -11,7 +11,7 @@ struct LoginView: View {
    
     @Binding var authenticationState: AuthenticationState
     
-    @StateObject private var authenticationViewModel = AuthenticationViewModel()
+    @StateObject private var authenticationViewModel = AuthenticationViewModel(authenticationManager: AuthenticationManager())
     
     var body: some View {
         VStack {
@@ -83,7 +83,7 @@ extension LoginView {
     
     private var primaryButtonContainer: some View {
         VStack(spacing: 39) {
-            Button(action: { authenticationViewModel.signIn() }) {
+            Button(action: { authenticationViewModel.singIn() }) {
                 Text("Login")
                     .foregroundColor(.white)
                     .frame(height: 55)

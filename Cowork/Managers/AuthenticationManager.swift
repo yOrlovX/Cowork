@@ -20,14 +20,20 @@ struct AuthenticationDatResultModel {
     }
 }
 
-final class AuthenticationManager {
+final class AuthenticationManager: AuthenticationManagerProtocol {
+    func signIn(email: String, password: String) async throws -> AuthenticationDatResultModel {
+        let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+        return AuthenticationDatResultModel(user: authResult.user)
+    }
     
-    static let shared = AuthenticationManager()
-    
-    private init() { }
     
     func createUser(email: String, password: String) async throws -> AuthenticationDatResultModel {
        let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
         return  AuthenticationDatResultModel(user: authDataResult.user)
     }
+}
+
+protocol AuthenticationManagerProtocol {
+    func createUser(email: String, password: String) async throws -> AuthenticationDatResultModel
+    func signIn(email: String, password: String) async throws -> AuthenticationDatResultModel
 }
