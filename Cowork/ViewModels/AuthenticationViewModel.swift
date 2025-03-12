@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+enum AuthenticationState {
+    case login
+    case register
+    case authenticated
+}
+
 final class AuthenticationViewModel: ObservableObject {
     
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var name: String = ""
+    @Published var confirmedPassword: String = ""
+    @Published var authenticationState: AuthenticationState = .login
+    @Published var errorMessage: String?
     
     let authenticationManager: AuthenticationManagerProtocol
     
@@ -19,25 +29,39 @@ final class AuthenticationViewModel: ObservableObject {
     }
     
     func signUp() {
-        guard !email.isEmpty, !password.isEmpty else { return }
+        guard !email.isEmpty, !password.isEmpty else {
+            errorMessage = "Email and password cannot be empty"
+            return
+        }
         Task {
             do {
                 let _ = try await authenticationManager.createUser(email: email, password: password)
-                print("User was created")
-            } catch let error {
-                print("Sing Up ERROR: \(error)")
+                DispatchQueue.main.async {
+                    self.authenticationState = .authenticated
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                }
             }
         }
     }
     
-    func singIn() {
-        guard !email.isEmpty, !password.isEmpty else { return }
+    func signIn() {
+        guard !email.isEmpty, !password.isEmpty else {
+            errorMessage = "Email and password cannot be empty"
+            return
+        }
         Task {
             do {
                 let _ = try await authenticationManager.signIn(email: email, password: password)
-                print("User: \(email), \(password) sign in")
-            } catch let error  {
-               print("Sing In ERROR: \(error)")
+                DispatchQueue.main.async {
+                    self.authenticationState = .authenticated
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                }
             }
         }
     }

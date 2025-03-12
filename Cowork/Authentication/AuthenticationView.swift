@@ -7,26 +7,27 @@
 
 import SwiftUI
 
-enum AuthenticationState {
-    case login
-    case register
-}
-
 struct AuthenticationView: View {
-    @State private var authenticationState: AuthenticationState = .login
+    @StateObject private var viewModel = AuthenticationViewModel(authenticationManager: AuthenticationManager())
     
     var body: some View {
         ZStack {
-            switch authenticationState {
+            switch viewModel.authenticationState {
             case .login:
-                LoginView(authenticationState: $authenticationState)
+                LoginView(viewModel: viewModel)
             case .register:
-                RegisterView(authenticationState: $authenticationState)
+                RegisterView(viewModel: viewModel)
+            case .authenticated:
+                MainView()
             }
+        }
+        .alert(isPresented: .constant(viewModel.errorMessage != nil)) {
+            Alert(title: Text("Error"), message: Text(viewModel.errorMessage ?? ""), dismissButton: .default(Text("OK")) {
+                viewModel.errorMessage = nil
+            })
         }
     }
 }
-
 
 #if DEBUG
 struct AuthenticationView_Previews: PreviewProvider {

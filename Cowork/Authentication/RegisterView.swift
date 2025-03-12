@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
     
-    @Binding var authenticationState: AuthenticationState
+    @StateObject var viewModel = AuthenticationViewModel(authenticationManager: AuthenticationManager())
     
     var body: some View {
         VStack {
@@ -42,7 +38,7 @@ extension RegisterView {
                 Text("Your name")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Your Awesome Name", text: $email)
+                TextField("Your Awesome Name", text: $viewModel.name)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -53,7 +49,7 @@ extension RegisterView {
                 Text("Email")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Youremail@mail.com", text: $email)
+                TextField("Youremail@mail.com", text: $viewModel.email)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -65,7 +61,7 @@ extension RegisterView {
                 Text("Password")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Password ****", text: $password)
+                TextField("Password ****", text: $viewModel.password)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -76,7 +72,7 @@ extension RegisterView {
                 Text("Password Again")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Password ****", text: $email)
+                TextField("Password ****", text: $viewModel.confirmedPassword)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -110,7 +106,7 @@ extension RegisterView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: { authenticationState = .login }) {
+            Button(action: { viewModel.authenticationState = .login }) {
                 HStack {
                     Text("Already have an account?")
                         .font(Montserrat.medium.size(size: 12))
@@ -125,8 +121,11 @@ extension RegisterView {
     }
 }
 
+#if DEBUG
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView(authenticationState: .constant(.register))
+        let vm = AuthenticationViewModel(authenticationManager: AuthenticationManager())
+        RegisterView(viewModel: vm)
     }
 }
+#endif

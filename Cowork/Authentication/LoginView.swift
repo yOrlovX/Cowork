@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-   
-    @Binding var authenticationState: AuthenticationState
     
-    @StateObject private var authenticationViewModel = AuthenticationViewModel(authenticationManager: AuthenticationManager())
+    @StateObject var viewModel =  AuthenticationViewModel(authenticationManager: AuthenticationManager())
     
     var body: some View {
         VStack {
@@ -40,7 +38,7 @@ extension LoginView {
                 Text("Email")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Youremail@mail.com", text: $authenticationViewModel.email)
+                TextField("Youremail@mail.com", text: $viewModel.email)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -52,7 +50,7 @@ extension LoginView {
                 Text("Password")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Password ****", text: $authenticationViewModel.password)
+                TextField("Password ****", text: $viewModel.password)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)
@@ -83,7 +81,7 @@ extension LoginView {
     
     private var primaryButtonContainer: some View {
         VStack(spacing: 39) {
-            Button(action: { authenticationViewModel.singIn() }) {
+            Button(action: { viewModel.signIn() }) {
                 Text("Login")
                     .foregroundColor(.white)
                     .frame(height: 55)
@@ -91,7 +89,7 @@ extension LoginView {
                     .background(Color.primaryPurple)
                     .cornerRadius(8)
             }
-            Button(action: { authenticationState = .register }) {
+            Button(action: { viewModel.authenticationState = .register }) {
                 HStack {
                     Text("Don’t Have An Account yet?")
                         .font(Montserrat.medium.size(size: 12))
@@ -109,7 +107,7 @@ extension LoginView {
 #if DEBUG
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(authenticationState: .constant(.login))
+        LoginView()
     }
 }
 #endif
