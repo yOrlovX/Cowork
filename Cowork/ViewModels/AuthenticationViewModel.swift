@@ -18,27 +18,26 @@ final class AuthenticationViewModel: ObservableObject {
         self.authenticationManager = authenticationManager
     }
     
-    func signUp() {
+    func signUp() throws {
         guard !email.isEmpty, !password.isEmpty else { return }
-
         Task {
             do {
-                let returnedUserData = try await authenticationManager.createUser(email: email, password: password)
-                print("Succeess")
-            } catch {
-                print("\(error)")
+                let _ = try await authenticationManager.createUser(email: email, password: password)
+                print("User was created")
+            } catch let error {
+                throw CoworkError.createUserError(error)
             }
         }
     }
-    func singIn() {
+    
+    func singIn() throws {
         guard !email.isEmpty, !password.isEmpty else { return }
-        
         Task {
             do {
                 let _ = try await authenticationManager.signIn(email: email, password: password)
                 print("User: \(email), \(password) sign in")
-            } catch {
-                print("\(error)")
+            } catch let error  {
+                throw CoworkError.userSignInError(error)
             }
         }
     }
