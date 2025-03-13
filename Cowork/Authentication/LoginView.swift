@@ -11,6 +11,8 @@ struct LoginView: View {
     
     @StateObject var viewModel =  AuthenticationViewModel(authenticationManager: AuthenticationManager())
     
+    @State private var isPasswordVisible: Bool = false
+    
     var body: some View {
         VStack {
             Image("loginViewImage")
@@ -50,11 +52,30 @@ extension LoginView {
                 Text("Password")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Password ****", text: $viewModel.password)
-                    .padding()
-                    .frame(height: 45)
-                    .background(Color.textfieldBackground)
-                    .cornerRadius(8)
+                HStack {
+                    if isPasswordVisible {
+                        TextField("Password", text: $viewModel.password)
+                            .padding()
+                            .frame(height: 45)
+                            .background(Color.textfieldBackground)
+                            .cornerRadius(8)
+                    } else {
+                        SecureField("Password", text: $viewModel.password)
+                            .padding()
+                            .frame(height: 45)
+                            .background(Color.textfieldBackground)
+                            .cornerRadius(8)
+                    }
+                    
+                }
+                .overlay(alignment: .trailing) {
+                    Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
+                        .foregroundColor(.gray)
+                        .padding(.trailing, 8)
+                        .onTapGesture {
+                            isPasswordVisible.toggle()
+                        }
+                }
             }
             .padding(.horizontal, 20)
         }
