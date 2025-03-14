@@ -40,7 +40,7 @@ extension RegisterView {
                 Text("Your name")
                     .font(Montserrat.semiBold.size(size: 12))
                     .foregroundColor(.primaryDark)
-                TextField("Your Awesome Name", text: $viewModel.name)
+                TextField("Your Awesome Name", text: $viewModel.userName)
                     .padding()
                     .frame(height: 45)
                     .background(Color.textfieldBackground)

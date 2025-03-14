@@ -29,3 +29,19 @@ case userSignOutError(Error)
         }
     }
 }
+
+enum ValidationError: Error, LocalizedError {
+    case userNameTooShort
+    case invalidEmail
+    case passwordTooShort
+    case passwordsDoNotMatch
+
+    var errorDescription: String? {
+        switch self {
+        case .userNameTooShort: return "Username must be at least 3 characters long"
+        case .invalidEmail: return "Invalid email format"
+        case .passwordTooShort: return "Password must be at least 6 characters long"
+        case .passwordsDoNotMatch: return "Passwords do not match"
+        }
+    }
+}

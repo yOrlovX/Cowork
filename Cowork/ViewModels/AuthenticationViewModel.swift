@@ -17,7 +17,7 @@ final class AuthenticationViewModel: ObservableObject {
     
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var name: String = ""
+    @Published var userName: String = ""
     @Published var confirmedPassword: String = ""
     @Published var authenticationState: AuthenticationState = .login
     @Published var errorMessage: String?
@@ -47,7 +47,7 @@ final class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    func signIn() {
+    func login() {
         guard !email.isEmpty, !password.isEmpty else {
             errorMessage = "Email and password cannot be empty"
             return

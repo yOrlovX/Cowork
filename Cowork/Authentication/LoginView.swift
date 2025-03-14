@@ -102,7 +102,7 @@ extension LoginView {
     
     private var primaryButtonContainer: some View {
         VStack(spacing: 39) {
-            Button(action: { viewModel.signIn() }) {
+            Button(action: { viewModel.login() }) {
                 Text("Login")
                     .foregroundColor(.white)
                     .frame(height: 55)
