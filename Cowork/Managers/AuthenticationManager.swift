@@ -31,9 +31,17 @@ final class AuthenticationManager: AuthenticationManagerProtocol {
        let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
         return  AuthenticationDatResultModel(user: authDataResult.user)
     }
+    
+    func getUser() throws -> AuthenticationDatResultModel {
+        guard let user = Auth.auth().currentUser else {
+            throw ValidationError.userNotFound
+        }
+        return AuthenticationDatResultModel(user: user)
+    }
 }
 
 protocol AuthenticationManagerProtocol {
     func createUser(email: String, password: String) async throws -> AuthenticationDatResultModel
     func signIn(email: String, password: String) async throws -> AuthenticationDatResultModel
+    func getUser() throws -> AuthenticationDatResultModel
 }
