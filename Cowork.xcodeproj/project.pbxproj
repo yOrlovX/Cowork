@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920CED6A2D817DE600079BEA /* CoworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920CED692D817DE600079BEA /* CoworkErrors.swift */; };
+		92263DA82D885171005B19E4 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92263DA72D885171005B19E4 /* ViewModifiers.swift */; };
 		924179B52D79EB12000E04D8 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924179B42D79EB12000E04D8 /* FavoriteView.swift */; };
 		925C5BB92D79BC6B002683BE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C5BB82D79BC6B002683BE /* MainView.swift */; };
 		9264DC2A2D7998290060DEE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9264DC292D7998290060DEE2 /* HomeView.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		920CED692D817DE600079BEA /* CoworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkErrors.swift; sourceTree = "<group>"; };
+		92263DA72D885171005B19E4 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		924179B42D79EB12000E04D8 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		925C5BB82D79BC6B002683BE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9264DC292D7998290060DEE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 				920CED692D817DE600079BEA /* CoworkErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		92263DA62D885160005B19E4 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				92263DA72D885171005B19E4 /* ViewModifiers.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		924179B32D79EB03000E04D8 /* Favorite */ = {
@@ -221,6 +231,7 @@
 		92D038032D772B5C002BFC28 /* Cowork */ = {
 			isa = PBXGroup;
 			children = (
+				92263DA62D885160005B19E4 /* ViewModifiers */,
 				920CED682D817DD100079BEA /* Errors */,
 				92AB520C2D8031650036CD7F /* Managers */,
 				92AB52092D8030190036CD7F /* ViewModels */,
@@ -472,6 +483,7 @@
 				92755F4C2D804A8A00E737AD /* AuthenticationView.swift in Sources */,
 				92DE60282D78611F00693AB8 /* RegisterView.swift in Sources */,
 				928C8D252D7AEAB900F22632 /* CoworkingDetailView.swift in Sources */,
+				92263DA82D885171005B19E4 /* ViewModifiers.swift in Sources */,
 				925C5BB92D79BC6B002683BE /* MainView.swift in Sources */,
 				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
 				92EC71322D7733FB00E0DD54 /* FontExtension.swift in Sources */,

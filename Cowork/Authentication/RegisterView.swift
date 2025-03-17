@@ -38,44 +38,29 @@ extension RegisterView {
                 .padding(.horizontal, 20)
             VStack(alignment: .leading, spacing: 11) {
                 Text("Your name")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 TextField("Your Awesome Name", text: $viewModel.userName)
-                    .padding()
-                    .frame(height: 45)
-                    .background(Color.textfieldBackground)
-                    .cornerRadius(8)
+                    .modifier(PrimaryTextFieldModifier())
             }
             .padding(.horizontal, 20)
             VStack(alignment: .leading, spacing: 11) {
                 Text("Email")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 TextField("Youremail@mail.com", text: $viewModel.email)
-                    .padding()
-                    .frame(height: 45)
-                    .background(Color.textfieldBackground)
-                    .cornerRadius(8)
+                    .modifier(PrimaryTextFieldModifier())
             }
             .padding(.horizontal, 20)
             
             VStack(alignment: .leading, spacing: 11) {
                 Text("Password")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 HStack {
                     if isPasswordVisible {
                         TextField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     } else {
                         SecureField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     }
                     
                 }
@@ -91,21 +76,14 @@ extension RegisterView {
             .padding(.horizontal, 20)
             VStack(alignment: .leading, spacing: 11) {
                 Text("Password Again")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 HStack {
                     if isPasswordVisible {
                         TextField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     } else {
                         SecureField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     }
                     
                 }
@@ -140,11 +118,7 @@ extension RegisterView {
         VStack(spacing: 39) {
             Button(action: {}) {
                 Text("Register")
-                    .foregroundColor(.white)
-                    .frame(height: 55)
-                    .frame(width: UIScreen.main.bounds.width - 40)
-                    .background(Color.primaryPurple)
-                    .cornerRadius(8)
+                    .modifier(PrimaryButtonModifier())
             }
             Button(action: { viewModel.authenticationState = .login }) {
                 HStack {

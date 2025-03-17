@@ -38,33 +38,22 @@ extension LoginView {
                 .padding(.horizontal, 20)
             VStack(alignment: .leading, spacing: 11) {
                 Text("Email")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 TextField("Youremail@mail.com", text: $viewModel.email)
-                    .padding()
-                    .frame(height: 45)
-                    .background(Color.textfieldBackground)
-                    .cornerRadius(8)
+                    .modifier(PrimaryTextFieldModifier())
             }
             .padding(.horizontal, 20)
             
             VStack(alignment: .leading, spacing: 11) {
                 Text("Password")
-                    .font(Montserrat.semiBold.size(size: 12))
-                    .foregroundColor(.primaryDark)
+                    .modifier(TextFieldLabelModifier())
                 HStack {
                     if isPasswordVisible {
                         TextField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     } else {
                         SecureField("Password", text: $viewModel.password)
-                            .padding()
-                            .frame(height: 45)
-                            .background(Color.textfieldBackground)
-                            .cornerRadius(8)
+                            .modifier(PrimaryTextFieldModifier())
                     }
                     
                 }
@@ -104,11 +93,7 @@ extension LoginView {
         VStack(spacing: 39) {
             Button(action: { viewModel.login() }) {
                 Text("Login")
-                    .foregroundColor(.white)
-                    .frame(height: 55)
-                    .frame(width: UIScreen.main.bounds.width - 40)
-                    .background(Color.primaryPurple)
-                    .cornerRadius(8)
+                    .modifier(PrimaryButtonModifier())
             }
             Button(action: { viewModel.authenticationState = .register }) {
                 HStack {
