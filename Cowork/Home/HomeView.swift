@@ -24,6 +24,7 @@ struct HomeView: View {
                 }
             }
         }
+        .toolbar(.hidden)
         .background(Color.lightBackground)
     }
 }

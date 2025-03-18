@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9203A79D2D89742B000A2EEB /* NearestPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203A79C2D89742B000A2EEB /* NearestPlaceView.swift */; };
 		920CED6A2D817DE600079BEA /* CoworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920CED692D817DE600079BEA /* CoworkErrors.swift */; };
 		92263DA82D885171005B19E4 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92263DA72D885171005B19E4 /* ViewModifiers.swift */; };
 		924179B52D79EB12000E04D8 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924179B42D79EB12000E04D8 /* FavoriteView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9203A79C2D89742B000A2EEB /* NearestPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceView.swift; sourceTree = "<group>"; };
 		920CED692D817DE600079BEA /* CoworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoworkErrors.swift; sourceTree = "<group>"; };
 		92263DA72D885171005B19E4 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		924179B42D79EB12000E04D8 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				9264DC2B2D799F680060DEE2 /* CoworkingSpaceCell.swift */,
 				928C8D242D7AEAB900F22632 /* CoworkingDetailView.swift */,
 				928C8D282D7AFB3700F22632 /* DetailRowView.swift */,
+				9203A79C2D89742B000A2EEB /* NearestPlaceView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				92755F4C2D804A8A00E737AD /* AuthenticationView.swift in Sources */,
 				92DE60282D78611F00693AB8 /* RegisterView.swift in Sources */,
 				928C8D252D7AEAB900F22632 /* CoworkingDetailView.swift in Sources */,
+				9203A79D2D89742B000A2EEB /* NearestPlaceView.swift in Sources */,
 				92263DA82D885171005B19E4 /* ViewModifiers.swift in Sources */,
 				925C5BB92D79BC6B002683BE /* MainView.swift in Sources */,
 				92EC71342D773A3800E0DD54 /* OnboardingView.swift in Sources */,
