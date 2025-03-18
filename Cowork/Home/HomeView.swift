@@ -79,16 +79,21 @@ extension HomeView {
     
     private var buttonsContainer: some View {
         HStack {
-            Button(action: {}) {
+            NavigationLink(destination: { NearestPlaceView()}) {
                 Rectangle()
                     .foregroundColor(.white)
                     .frame(width: 95, height: 95)
                     .cornerRadius(16)
                     .overlay {
-                        Image("map")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 45, height: 45)
+                        VStack(spacing: 12) {
+                            Image("map")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45, height: 45)
+                            Text("Nearest Place")
+                                .font(Montserrat.semiBold.size(size: 9))
+                                .foregroundColor(.primaryDark)
+                        }
                     }
             }
             Spacer()
@@ -98,10 +103,15 @@ extension HomeView {
                     .frame(width: 95, height: 95)
                     .cornerRadius(16)
                     .overlay {
-                        Image("card")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 45, height: 45)
+                        VStack(spacing: 12) {
+                            Image("card")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45, height: 45)
+                            Text("Book Room")
+                                .font(Montserrat.semiBold.size(size: 9))
+                                .foregroundColor(.primaryDark)
+                        }
                     }
             }
             Spacer()
@@ -111,10 +121,15 @@ extension HomeView {
                     .frame(width: 95, height: 95)
                     .cornerRadius(16)
                     .overlay {
-                        Image("calendar")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 45, height: 45)
+                        VStack(spacing: 12) {
+                            Image("calendar")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45, height: 45)
+                            Text("Add Event")
+                                .font(Montserrat.semiBold.size(size: 9))
+                                .foregroundColor(.primaryDark)
+                        }
                     }
             }
         }
