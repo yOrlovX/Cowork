@@ -26,7 +26,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Favofite", systemImage: "bookmark")
                 }
-            Text("Profile")
+           ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

@@ -30,7 +30,7 @@ struct ProfileView: View {
                 .foregroundColor(.primaryGray)
             
             HStack {
-                Button(action: {}) {
+                NavigationLink(destination: { EditProfileView() }) {
                     Rectangle()
                         .frame(height: 28)
                         .frame(width: 70)
