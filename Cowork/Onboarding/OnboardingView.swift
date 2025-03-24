@@ -64,6 +64,7 @@ extension OnboardingView {
                             }
                     }
                 }
+                .frame(minHeight: 80)
             }
             .padding(.horizontal, 20)
             Spacer()
@@ -98,6 +99,7 @@ extension OnboardingView {
                             }
                     }
                 }
+                .frame(minHeight: 80)
             }
             .padding(.horizontal, 20)
             Spacer()
@@ -115,7 +117,7 @@ extension OnboardingView {
                     .foregroundColor(.primaryDark)
                     .font(Montserrat.medium.size(size: 28))
                 
-                HStack {
+                HStack(alignment: .top) {
                     Text("Create your event by determining \nthe place that has been provided")
                         .font(Montserrat.medium.size(size: 12))
                         .foregroundColor(.primaryGray)
@@ -132,6 +134,7 @@ extension OnboardingView {
                             }
                     }
                 }
+                .frame(minHeight: 80)
             }
             .padding(.horizontal, 20)
             Spacer()
