@@ -33,7 +33,7 @@ struct EditProfileView: View {
                                     Image(uiImage: selectedProfileImage)
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height: 150)
+                                        .frame(maxWidth: .infinity, minHeight: 150)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                 } else {
                                     Image(systemName: "camera.fill")
@@ -67,7 +67,7 @@ struct EditProfileView: View {
                                     Image(uiImage: selectedCoverImage)
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height: 150)
+                                        .frame(maxWidth: .infinity, minHeight: 150)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                 } else {
                                     Image(systemName: "camera.fill")
